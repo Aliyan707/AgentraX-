@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes --name portfolio)",
+      "Read(//c/Users/Cs/Desktop/**)",
+      "Bash(npx create-next-app@latest nexaforge --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(robocopy \"C:/Users/Cs/Desktop/nexaforge\" \"C:/Users/Cs/Desktop/Portfolio\" /E /NFL /NDL /NJH /NJS)",
+      "Bash(cp *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"/ → %{http_code}\\\\n\" http://localhost:3001)",
+      "Bash(curl -s -o /dev/null -w \"/about → %{http_code}\\\\n\" http://localhost:3001/about)",
+      "Bash(curl -s -o /dev/null -w \"/services → %{http_code}\\\\n\" http://localhost:3001/services)",
+      "Bash(curl -s -o /dev/null -w \"/portfolio → %{http_code}\\\\n\" http://localhost:3001/portfolio)",
+      "Bash(curl -s -o /dev/null -w \"/contact → %{http_code}\\\\n\" http://localhost:3001/contact)",
+      "Bash(curl -s -o /dev/null -w \"/ → %{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"/about → %{http_code}\\\\n\" http://localhost:3000/about)",
+      "Bash(curl -s -o /dev/null -w \"/services → %{http_code}\\\\n\" http://localhost:3000/services)",
+      "Bash(curl -s -o /dev/null -w \"/portfolio → %{http_code}\\\\n\" http://localhost:3000/portfolio)",
+      "Bash(curl -s -o /dev/null -w \"/contact → %{http_code}\\\\n\" http://localhost:3000/contact)",
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(netstat -ano)",
+      "PowerShell(Stop-Process *)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000)",
+      "Bash(curl -s -o /dev/null -w \"/portfolio HTTP %{http_code}\\\\n\" http://localhost:3000/portfolio)"
+    ]
+  }
+}
