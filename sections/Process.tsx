@@ -79,7 +79,7 @@ export default function Process() {
           }}
         >
           <div className="section-badge mb-5 mx-auto w-fit">How We Work</div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             From Idea to{" "}
             <span className="gradient-text">Successful Launch</span>
           </h2>
@@ -140,7 +140,7 @@ export default function Process() {
 
         {/* CTA */}
         <div
-          className="text-center mt-20 glass rounded-3xl p-10 border border-white/8"
+          className="text-center mt-20 glass rounded-3xl p-6 sm:p-10 border border-white/8"
           style={{
             opacity: inView ? 1 : 0,
             transition: "opacity 0.7s ease 0.7s",

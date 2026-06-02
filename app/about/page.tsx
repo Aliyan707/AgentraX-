@@ -77,11 +77,10 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <div className="section-badge mb-6">About AgentraX</div>
             <h1 className="display-2 text-white mb-6">
-              We&apos;re Not Just Builders —
-              <br />
+              We&apos;re Not Just Builders —{" "}
               <span className="gradient-text">We&apos;re Your Partners</span>
             </h1>
-            <p className="text-gray-400 text-xl leading-relaxed mb-8 max-w-2xl">
+            <p className="text-gray-400 text-base sm:text-xl leading-relaxed mb-8 max-w-2xl">
               Founded in 2019, AgentraX grew from three engineers with impossibly
               high standards into a full-stack agency trusted by startups and
               enterprises alike. We don&apos;t just code — we obsess over every

@@ -59,7 +59,7 @@ export default function Hero() {
         </div>
 
         {/* Headline */}
-        <h1 className="text-5xl md:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-black text-white leading-[1.1] tracking-tight mb-6">
           We Build{" "}
           <span className="gradient-text">Digital Experiences</span>
           <br className="hidden sm:block" /> That Drive Results
@@ -96,11 +96,11 @@ export default function Hero() {
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`px-6 py-6 text-center ${
+              className={`px-3 py-4 sm:px-6 sm:py-6 text-center ${
                 i < stats.length - 1 ? "border-r border-white/8" : ""
               }`}
             >
-              <div className="text-3xl font-black gradient-text mb-1">
+              <div className="text-2xl sm:text-3xl font-black gradient-text mb-1">
                 {stat.value}
               </div>
               <div className="text-gray-500 text-sm font-medium">

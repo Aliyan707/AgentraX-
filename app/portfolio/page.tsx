@@ -235,7 +235,7 @@ export default function PortfolioPage() {
             Work We&apos;re{" "}
             <span className="gradient-text">Proud Of</span>
           </h1>
-          <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed">
             Each project is a story of transformation — a business challenge met
             with elegant technology and relentless execution. Click any card to
             see the full story.

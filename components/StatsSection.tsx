@@ -79,14 +79,12 @@ export default function StatsSection({ dark = false }: { dark?: boolean }) {
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className={`px-8 py-10 text-center bg-[#09090f] hover:bg-purple-900/10 transition-colors duration-300 ${
-                i > 0 ? "" : ""
-              }`}
+              className="px-3 py-5 sm:px-8 sm:py-10 text-center bg-[#09090f] hover:bg-purple-900/10 transition-colors duration-300"
             >
-              <div className="text-4xl md:text-5xl font-black gradient-text mb-2">
+              <div className="text-2xl sm:text-4xl md:text-5xl font-black gradient-text mb-1 sm:mb-2">
                 <CountUp target={s.numericValue} suffix={s.suffix} prefix={s.prefix} />
               </div>
-              <div className="text-white font-semibold text-sm mb-1">{s.label}</div>
+              <div className="text-white font-semibold text-xs sm:text-sm mb-1">{s.label}</div>
               <div className="text-gray-600 text-xs leading-relaxed hidden md:block">{s.description}</div>
             </div>
           ))}

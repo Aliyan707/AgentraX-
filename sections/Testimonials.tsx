@@ -105,7 +105,7 @@ export default function Testimonials() {
           }}
         >
           <div className="section-badge mb-5 mx-auto w-fit">Client Success</div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             Trusted by <span className="gradient-text">Builders & Leaders</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto text-lg">

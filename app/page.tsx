@@ -197,7 +197,7 @@ function HeroSection() {
         </h1>
 
         {/* Subheadline */}
-        <p className="text-gray-400 text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-gray-400 text-base sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed mb-10">
           From AI-powered platforms to enterprise software — we craft digital
           solutions that transform how businesses operate and compete.
         </p>

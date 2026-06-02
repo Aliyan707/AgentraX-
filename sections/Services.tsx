@@ -87,7 +87,7 @@ export default function Services() {
           }}
         >
           <div className="section-badge mb-5 mx-auto w-fit">What We Do</div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             Comprehensive{" "}
             <span className="gradient-text">Digital Services</span>
           </h2>

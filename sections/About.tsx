@@ -35,7 +35,7 @@ export default function About() {
           <div className="space-y-8">
             <div className="section-badge w-fit">About AgentraX</div>
 
-            <h2 className="text-4xl md:text-5xl font-black text-white leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white leading-tight">
               We&apos;re Not Just Builders —
               <br />
               <span className="gradient-text">We&apos;re Your Partners</span>
@@ -91,8 +91,8 @@ export default function About() {
                   <stat.icon className="w-5 h-5 text-white" />
                 </div>
                 <div>
-                  <div className="text-3xl font-black gradient-text">{stat.value}</div>
-                  <div className="text-gray-500 text-sm font-medium mt-0.5">{stat.label}</div>
+                  <div className="text-2xl sm:text-3xl font-black gradient-text">{stat.value}</div>
+                  <div className="text-gray-500 text-xs sm:text-sm font-medium mt-0.5">{stat.label}</div>
                 </div>
               </div>
             ))}

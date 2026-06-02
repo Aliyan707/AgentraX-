@@ -84,7 +84,7 @@ export default function ContactPage() {
             Let&apos;s Build Something{" "}
             <span className="gradient-text">Remarkable</span>
           </h1>
-          <p className="text-gray-400 text-xl max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-400 text-base sm:text-xl max-w-xl mx-auto leading-relaxed">
             Tell us about your project — we&apos;ll respond with a thoughtful proposal
             within 24 hours.
           </p>
@@ -171,7 +171,7 @@ export default function ContactPage() {
 
             {/* ── Form ─────────────────────────────── */}
             <div className="lg:col-span-3">
-              <div className="glass-card border border-white/8 rounded-3xl p-8">
+              <div className="glass-card border border-white/8 rounded-3xl p-5 sm:p-8">
                 {sent ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center gap-5">
                     <div className="w-16 h-16 rounded-full bg-green-500/15 border border-green-500/30 flex items-center justify-center">

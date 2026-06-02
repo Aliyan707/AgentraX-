@@ -145,7 +145,7 @@ export default function ServicesPage() {
             Everything You Need to{" "}
             <span className="gradient-text">Win Digitally</span>
           </h1>
-          <p className="text-gray-400 text-xl max-w-2xl mx-auto leading-relaxed mb-10">
+          <p className="text-gray-400 text-base sm:text-xl max-w-2xl mx-auto leading-relaxed mb-10">
             Six core practices. One integrated team. Whether you need a single
             service or end-to-end delivery, we have the expertise to execute at
             the highest level.

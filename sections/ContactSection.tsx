@@ -90,7 +90,7 @@ export default function ContactSection() {
           }}
         >
           <div className="section-badge mb-5 mx-auto w-fit">Get In Touch</div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             Let&apos;s Build{" "}
             <span className="gradient-text">Something Amazing</span>
           </h2>
@@ -172,7 +172,7 @@ export default function ContactSection() {
               transition: "opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s",
             }}
           >
-            <div className="glass rounded-3xl p-8 border border-white/8">
+            <div className="glass rounded-3xl p-5 sm:p-8 border border-white/8">
               {sent ? (
                 <div className="flex flex-col items-center justify-center py-16 text-center gap-4">
                   <div className="w-16 h-16 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center">

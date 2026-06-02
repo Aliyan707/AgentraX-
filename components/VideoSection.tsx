@@ -135,15 +135,15 @@ export default function VideoSection() {
           </div>
 
           {/* Stats strip */}
-          <div className="mt-6 grid grid-cols-3 gap-3">
+          <div className="mt-6 grid grid-cols-3 gap-1.5 sm:gap-3">
             {[
               { v: "300+", l: "Products Shipped" },
               { v: "98%", l: "Client Satisfaction" },
               { v: "5+", l: "Years in Business" },
             ].map(({ v, l }) => (
-              <div key={l} className="glass-card border border-white/7 p-4 text-center rounded-2xl">
-                <div className="text-2xl font-black gradient-text">{v}</div>
-                <div className="text-gray-500 text-xs mt-0.5">{l}</div>
+              <div key={l} className="glass-card border border-white/7 p-2 sm:p-4 text-center rounded-2xl">
+                <div className="text-lg sm:text-2xl font-black gradient-text">{v}</div>
+                <div className="text-gray-500 text-[10px] leading-tight sm:text-xs sm:leading-normal mt-0.5">{l}</div>
               </div>
             ))}
           </div>

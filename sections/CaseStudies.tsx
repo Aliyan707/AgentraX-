@@ -72,7 +72,7 @@ export default function CaseStudies() {
           }}
         >
           <div className="section-badge mb-5 mx-auto w-fit">Our Work</div>
-          <h2 className="text-4xl md:text-5xl font-black text-white mb-5">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-5">
             Projects That Define{" "}
             <span className="gradient-text">Excellence</span>
           </h2>
