@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { TrendingUp, ArrowUpRight, ExternalLink } from "lucide-react";
 import CTASection from "@/components/CTASection";
 
@@ -20,6 +21,7 @@ const projects = [
     tag: "#1 Rated FinTech Tool",
     tech: ["Next.js", "OpenAI", "PostgreSQL", "AWS"],
     impact: ["340% MAU growth", "4.9★ App Store", "$8M raised after launch"],
+    live: null,
   },
   {
     id: "medcore",
@@ -33,6 +35,7 @@ const projects = [
     tag: "HIPAA Compliant",
     tech: ["React", "Node.js", "MongoDB", "Azure"],
     impact: ["60% time savings", "50+ clinics onboarded", "HIPAA certified"],
+    live: null,
   },
   {
     id: "tradepulse",
@@ -46,6 +49,7 @@ const projects = [
     tag: "AI-Powered",
     tech: ["Next.js", "Python", "Custom LLM", "GCP"],
     impact: ["$2M ARR Year 1", "15ms latency", "12K active users"],
+    live: null,
   },
   {
     id: "shopstream",
@@ -59,6 +63,7 @@ const projects = [
     tag: "Headless Commerce",
     tech: ["Next.js", "Shopify", "Vercel", "Redis"],
     impact: ["250% CVR increase", "1.2s avg load time", "$15M GMV/month"],
+    live: null,
   },
   {
     id: "legaledge",
@@ -72,6 +77,7 @@ const projects = [
     tag: "Legal Tech",
     tech: ["React", "GPT-4", "Python", "AWS"],
     impact: ["80% time saved", "94% accuracy", "200+ law firms"],
+    live: null,
   },
   {
     id: "pocketfit",
@@ -85,6 +91,7 @@ const projects = [
     tag: "Health Tech",
     tech: ["React Native", "TensorFlow", "Node.js", "Firebase"],
     impact: ["500K downloads", "4.8★ rating", "38% Day-30 retention"],
+    live: null,
   },
   {
     id: "designsync",
@@ -98,6 +105,7 @@ const projects = [
     tag: "DesignOps",
     tech: ["Next.js", "Figma API", "OpenAI", "Supabase"],
     impact: ["3x faster handoff", "90% less rework", "500+ designers using"],
+    live: null,
   },
   {
     id: "logicoreops",
@@ -111,6 +119,22 @@ const projects = [
     tag: "Logistics Tech",
     tech: ["Next.js", "Python", "PostgreSQL", "Mapbox"],
     impact: ["45% fewer delays", "22% fuel savings", "8 countries"],
+    live: null,
+  },
+  {
+    id: "ai-employee-dashboard",
+    title: "AI Employee Dashboard",
+    category: "AI",
+    tags: ["AI", "Web"],
+    result: "10x faster workforce insights with AI",
+    description: "Intelligent employee management dashboard powered by AI — providing real-time analytics, performance tracking, and automated HR workflows in one unified platform.",
+    gradient: "from-purple-900 via-indigo-800 to-blue-900",
+    accent: "from-purple-400 to-blue-400",
+    tag: "AI-Powered",
+    tech: ["Next.js", "OpenAI", "TypeScript", "Tailwind CSS"],
+    impact: ["Real-time AI analytics", "Automated HR workflows", "Unified team overview"],
+    live: "https://ai-employee-dashboard-nine.vercel.app/login?from=%2Fdashboard%2Foverview",
+    image: "https://image.thum.io/get/width/800/crop/500/https://ai-employee-dashboard-nine.vercel.app/dashboard/overview",
   },
 ];
 
@@ -134,14 +158,25 @@ function ProjectCard({
     >
       {/* Visual */}
       <div className={`relative h-48 bg-gradient-to-br ${project.gradient} overflow-hidden`}>
-        <div className="absolute inset-0 grid-pattern opacity-20" />
-        <div
-          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full opacity-40"
-          style={{
-            background: "radial-gradient(circle, rgba(168,85,247,0.4) 0%, transparent 70%)",
-            filter: "blur(20px)",
-          }}
-        />
+        {(project as any).image ? (
+          <Image
+            src={(project as any).image}
+            alt={project.title}
+            fill
+            className="object-cover object-top"
+          />
+        ) : (
+          <>
+            <div className="absolute inset-0 grid-pattern opacity-20" />
+            <div
+              className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-44 h-44 rounded-full opacity-40"
+              style={{
+                background: "radial-gradient(circle, rgba(168,85,247,0.4) 0%, transparent 70%)",
+                filter: "blur(20px)",
+              }}
+            />
+          </>
+        )}
         <div className="absolute top-4 left-4 px-2.5 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/15 text-white text-xs font-semibold">
           {project.tag}
         </div>
@@ -196,14 +231,28 @@ function ProjectCard({
                 ))}
               </div>
             </div>
-            <Link
-              href="/contact"
-              className="btn-primary text-sm py-2.5 w-full justify-center mt-2 group"
-              onClick={(e) => e.stopPropagation()}
-            >
-              Build something similar
-              <ExternalLink className="w-4 h-4" />
-            </Link>
+            <div className="flex flex-col gap-2 mt-2">
+              {project.live && (
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-secondary text-sm py-2.5 w-full justify-center"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  View Live Project
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+              )}
+              <Link
+                href="/contact"
+                className="btn-primary text-sm py-2.5 w-full justify-center group"
+                onClick={(e) => e.stopPropagation()}
+              >
+                Build something similar
+                <ExternalLink className="w-4 h-4" />
+              </Link>
+            </div>
           </div>
         )}
       </div>

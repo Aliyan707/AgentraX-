@@ -74,18 +74,18 @@ export default function StatsSection({ dark = false }: { dark?: boolean }) {
             "radial-gradient(ellipse 80% 60% at 50% 50%, rgba(139,92,246,0.07) 0%, transparent 70%)",
         }}
       />
-      <div className="max-w-7xl mx-auto px-6 relative">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/5">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 relative">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 rounded-3xl overflow-hidden border border-white/5">
           {stats.map((s, i) => (
             <div
               key={s.label}
-              className="px-3 py-5 sm:px-8 sm:py-10 text-center bg-[#09090f] hover:bg-purple-900/10 transition-colors duration-300"
+              className="px-3 py-5 md:px-4 md:py-6 lg:px-8 lg:py-10 text-center bg-[#09090f] hover:bg-purple-900/10 transition-colors duration-300"
             >
-              <div className="text-2xl sm:text-4xl md:text-5xl font-black gradient-text mb-1 sm:mb-2">
+              <div className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-black gradient-text mb-1 sm:mb-2">
                 <CountUp target={s.numericValue} suffix={s.suffix} prefix={s.prefix} />
               </div>
               <div className="text-white font-semibold text-xs sm:text-sm mb-1">{s.label}</div>
-              <div className="text-gray-600 text-xs leading-relaxed hidden md:block">{s.description}</div>
+              <div className="text-gray-600 text-xs leading-relaxed hidden xl:block">{s.description}</div>
             </div>
           ))}
         </div>

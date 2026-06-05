@@ -86,12 +86,12 @@ export default function AboutPage() {
               enterprises alike. We don&apos;t just code — we obsess over every
               pixel, every data flow, every user interaction.
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/portfolio" className="btn-primary group">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link href="/portfolio" className="btn-primary group w-full sm:w-auto justify-center">
                 See Our Work
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
-              <Link href="/contact" className="btn-secondary">
+              <Link href="/contact" className="btn-secondary w-full sm:w-auto justify-center">
                 Start a Project
               </Link>
             </div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
               one roof, all obsessed with quality.
             </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
             {team.map((member) => (
               <div key={member.name} className="card p-5 text-center group cursor-default">
                 <div

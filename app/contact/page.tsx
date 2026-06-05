@@ -39,8 +39,8 @@ const projectTypes = [
 ];
 
 const contactInfo = [
-  { Icon: Mail, label: "Email", value: "hello@agentrax.io", href: "mailto:hello@agentrax.io" },
-  { Icon: Phone, label: "Phone", value: "+1 (555) 000-1234", href: "tel:+15550001234" },
+  { Icon: Mail, label: "Email", value: "info@agentrax.net", href: "mailto:info@agentrax.net" },
+  { Icon: Phone, label: "Phone", value: "0333 285 8292", href: "tel:+923332858292" },
   { Icon: MapPin, label: "Office", value: "225 Bush Street, San Francisco, CA 94104" },
 ];
 
@@ -97,7 +97,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 items-start">
 
             {/* ── Left sidebar ─────────────────────── */}
-            <div className="lg:col-span-2 space-y-5">
+            <div className="lg:col-span-2 space-y-5 order-2 lg:order-1">
               {/* Contact items */}
               {contactInfo.map(({ Icon, label, value, href }) => (
                 <div key={label} className="glass-card border border-white/7 rounded-2xl p-5 flex items-start gap-4">
@@ -132,7 +132,7 @@ export default function ContactPage() {
                 <div className="flex gap-3">
                   {[
                     { Icon: XIcon, href: "#", label: "X" },
-                    { Icon: LinkedinIcon, href: "#", label: "LinkedIn" },
+                    { Icon: LinkedinIcon, href: "https://pk.linkedin.com/company/agentrax", label: "LinkedIn" },
                     { Icon: GithubIcon, href: "#", label: "GitHub" },
                   ].map(({ Icon, href, label }) => (
                     <Link
@@ -170,7 +170,7 @@ export default function ContactPage() {
             </div>
 
             {/* ── Form ─────────────────────────────── */}
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 order-1 lg:order-2">
               <div className="glass-card border border-white/8 rounded-3xl p-5 sm:p-8">
                 {sent ? (
                   <div className="flex flex-col items-center justify-center py-16 text-center gap-5">

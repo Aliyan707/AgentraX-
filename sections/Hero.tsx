@@ -92,13 +92,11 @@ export default function Hero() {
           transition: "opacity 0.9s ease 0.3s",
         }}
       >
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-1 mt-14 border border-white/8 rounded-2xl overflow-hidden glass">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/5 mt-14 rounded-2xl overflow-hidden border border-white/8">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
-              className={`px-3 py-4 sm:px-6 sm:py-6 text-center ${
-                i < stats.length - 1 ? "border-r border-white/8" : ""
-              }`}
+              className="px-3 py-4 sm:px-6 sm:py-6 text-center bg-[#0a0a1a]"
             >
               <div className="text-2xl sm:text-3xl font-black gradient-text mb-1">
                 {stat.value}

@@ -35,8 +35,8 @@ function GithubIcon({ className }: { className?: string }) {
 }
 
 const contactInfo = [
-  { icon: Mail, label: "Email", value: "hello@agentrax.io" },
-  { icon: Phone, label: "Phone", value: "+1 (555) 000-1234" },
+  { icon: Mail, label: "Email", value: "info@agentrax.net" },
+  { icon: Phone, label: "Phone", value: "0333 285 8292" },
   { icon: MapPin, label: "Office", value: "San Francisco, CA 94107" },
 ];
 

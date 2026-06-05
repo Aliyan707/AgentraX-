@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Zap, ArrowRight } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 
 const links = [
   { href: "/", label: "Home" },
@@ -34,15 +35,10 @@ export default function Navbar() {
           : ""
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-[72px] flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 h-[88px] flex items-center justify-between">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2.5 flex-shrink-0 group">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-600 to-fuchsia-500 flex items-center justify-center shadow-[0_0_18px_rgba(139,92,246,0.55)] group-hover:shadow-[0_0_28px_rgba(139,92,246,0.75)] transition-shadow duration-300">
-            <Zap className="w-4 h-4 text-white fill-white" />
-          </div>
-          <span className="text-white font-black text-xl tracking-tight">
-            Agentra<span className="gradient-text">X</span>
-          </span>
+        <Link href="/" className="flex items-center flex-shrink-0">
+          <Image src="/logo.png.png" alt="AgentraX" width={400} height={80} className="h-16 w-[200px] object-contain object-left" priority />
         </Link>
 
         {/* Desktop nav */}

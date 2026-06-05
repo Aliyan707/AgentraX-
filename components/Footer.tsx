@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Zap, Mail, MapPin, Phone } from "lucide-react";
+import Image from "next/image";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 function XIcon({ className }: { className?: string }) {
   return (
@@ -48,14 +49,9 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 pt-16 pb-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-14">
           {/* Brand */}
-          <div className="lg:col-span-2 space-y-5">
-            <Link href="/" className="flex items-center gap-2.5 w-fit">
-              <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-600 to-fuchsia-500 flex items-center justify-center">
-                <Zap className="w-4 h-4 text-white fill-white" />
-              </div>
-              <span className="text-white font-black text-xl tracking-tight">
-                Agentra<span className="gradient-text">X</span>
-              </span>
+          <div className="md:col-span-2 lg:col-span-2 space-y-5">
+            <Link href="/" className="w-fit">
+              <Image src="/logo.png.png" alt="AgentraX" width={220} height={60} className="h-14 w-auto" />
             </Link>
             <p className="text-gray-500 text-sm leading-relaxed max-w-xs">
               Premium AI & software agency turning ambitious ideas into
@@ -64,8 +60,8 @@ export default function Footer() {
             </p>
             <div className="space-y-2.5">
               {[
-                { Icon: Mail, text: "hello@agentrax.io" },
-                { Icon: Phone, text: "+1 (555) 000-1234" },
+                { Icon: Mail, text: "info@agentrax.net" },
+                { Icon: Phone, text: "0333 285 8292" },
                 { Icon: MapPin, text: "San Francisco, CA" },
               ].map(({ Icon, text }) => (
                 <div key={text} className="flex items-center gap-2.5 text-gray-500 text-sm">
@@ -75,10 +71,16 @@ export default function Footer() {
               ))}
             </div>
             <div className="flex items-center gap-2.5 pt-1">
-              {[XIcon, LinkedinIcon, GithubIcon].map((Icon, i) => (
+              {[
+                { Icon: XIcon, href: "#" },
+                { Icon: LinkedinIcon, href: "https://pk.linkedin.com/company/agentrax" },
+                { Icon: GithubIcon, href: "#" },
+              ].map(({ Icon, href }, i) => (
                 <Link
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-9 h-9 rounded-full glass-card flex items-center justify-center text-gray-500 hover:text-purple-400 hover:border-purple-500/35 transition-all duration-200"
                 >
                   <Icon className="w-4 h-4" />

@@ -51,11 +51,11 @@ export default function CTASection({
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10">
-          <Link href={primaryHref} className="btn-primary text-base group">
+          <Link href={primaryHref} className="btn-primary text-base group w-full sm:w-auto justify-center">
             {primaryLabel}
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          <Link href={secondaryHref} className="btn-secondary text-base">
+          <Link href={secondaryHref} className="btn-secondary text-base w-full sm:w-auto justify-center">
             {secondaryLabel}
           </Link>
         </div>

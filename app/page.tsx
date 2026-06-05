@@ -8,7 +8,6 @@ import {
 } from "lucide-react";
 import VideoSection from "@/components/VideoSection";
 import ServiceCard from "@/components/ServiceCard";
-import ProjectCard from "@/components/ProjectCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import StatsSection from "@/components/StatsSection";
 import CTASection from "@/components/CTASection";
@@ -46,45 +45,6 @@ const homeServices = [
     description: "Human-centered design systems, brand identities, and Figma prototypes that convert.",
     gradient: "from-pink-600 to-fuchsia-600",
     glowColor: "rgba(236,72,153,0.3)",
-  },
-];
-
-const featuredProjects = [
-  {
-    title: "FinFlow Platform",
-    category: "FinTech SaaS",
-    result: "340% user growth in 6 months",
-    description: "AI-driven financial management SaaS with real-time analytics and enterprise-grade security.",
-    gradient: "from-purple-900 via-violet-800 to-indigo-900",
-    accent: "from-purple-400 to-violet-400",
-    tag: "#1 Rated FinTech Tool",
-  },
-  {
-    title: "MedCore HMS",
-    category: "Healthcare Tech",
-    result: "60% efficiency gain across 50+ clinics",
-    description: "Intelligent hospital management unifying patient records, scheduling, and billing.",
-    gradient: "from-fuchsia-900 via-purple-800 to-violet-900",
-    accent: "from-fuchsia-400 to-purple-400",
-    tag: "HIPAA Compliant",
-  },
-  {
-    title: "TradePulse AI",
-    category: "AI Trading Dashboard",
-    result: "$2M ARR achieved in Year 1",
-    description: "Real-time market intelligence platform powered by custom LLMs and predictive analytics.",
-    gradient: "from-violet-900 via-purple-800 to-fuchsia-900",
-    accent: "from-violet-400 to-fuchsia-400",
-    tag: "AI-Powered",
-  },
-  {
-    title: "ShopStream Commerce",
-    category: "E-Commerce",
-    result: "250% conversion rate increase",
-    description: "Headless commerce with personalised AI recommendations and omnichannel sync.",
-    gradient: "from-indigo-900 via-violet-800 to-purple-900",
-    accent: "from-indigo-400 to-violet-400",
-    tag: "Headless Commerce",
   },
 ];
 
@@ -135,19 +95,19 @@ function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-[#09090f]">
-      {/* Background orbs */}
-      <div className="absolute inset-0 pointer-events-none">
+      {/* Background orbs — sized down on mobile */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
-          className="absolute -top-48 -left-48 w-[900px] h-[900px] rounded-full bg-purple-800/20"
-          style={{ filter: "blur(130px)", animation: "float 8s ease-in-out infinite" }}
+          className="absolute -top-32 -left-32 w-[400px] h-[400px] sm:-top-48 sm:-left-48 sm:w-[900px] sm:h-[900px] rounded-full bg-purple-800/20"
+          style={{ filter: "blur(100px)", animation: "float 8s ease-in-out infinite" }}
         />
         <div
-          className="absolute top-20 -right-40 w-[700px] h-[700px] rounded-full bg-violet-700/15"
-          style={{ filter: "blur(110px)", animation: "float 11s ease-in-out 3s infinite" }}
+          className="absolute top-10 -right-20 w-[300px] h-[300px] sm:top-20 sm:-right-40 sm:w-[700px] sm:h-[700px] rounded-full bg-violet-700/15"
+          style={{ filter: "blur(90px)", animation: "float 11s ease-in-out 3s infinite" }}
         />
         <div
-          className="absolute -bottom-40 left-1/3 w-[600px] h-[600px] rounded-full bg-fuchsia-800/12"
-          style={{ filter: "blur(120px)", animation: "float 9s ease-in-out 5s infinite" }}
+          className="absolute -bottom-20 left-1/3 w-[250px] h-[250px] sm:-bottom-40 sm:w-[600px] sm:h-[600px] rounded-full bg-fuchsia-800/12"
+          style={{ filter: "blur(100px)", animation: "float 9s ease-in-out 5s infinite" }}
         />
       </div>
 
@@ -162,7 +122,7 @@ function HeroSection() {
 
       {/* Content */}
       <div
-        className="relative z-10 text-center max-w-6xl mx-auto px-6 pt-28 pb-8"
+        className="relative z-10 text-center w-full max-w-6xl mx-auto px-5 sm:px-6 pt-24 sm:pt-32 pb-8"
         style={{
           opacity: mounted ? 1 : 0,
           transform: mounted ? "translateY(0)" : "translateY(24px)",
@@ -170,63 +130,63 @@ function HeroSection() {
         }}
       >
         {/* Badge */}
-        <div className="section-badge mb-8 mx-auto w-fit">
+        <div className="section-badge mb-6 mx-auto w-fit text-[10px] sm:text-[11px]">
           <Sparkles className="w-3 h-3" />
           Trusted by 150+ companies worldwide
         </div>
 
-        {/* Headline */}
-        <h1 className="display-1 text-white mb-5">
+        {/* Headline — explicit responsive sizes, <br> before word on mobile */}
+        <h1
+          className="text-[2rem] sm:text-5xl lg:text-6xl xl:text-7xl font-black text-white leading-[1.1] mb-5 sm:mb-6"
+          style={{ letterSpacing: "-0.03em" }}
+        >
           We Build Products
           <br />
-          <span className="relative">
-            That{" "}
-            <span
-              className="gradient-text"
-              style={{
-                display: "inline-block",
-                minWidth: "9ch",
-                opacity: wordVisible ? 1 : 0,
-                transform: wordVisible ? "translateY(0) scale(1)" : "translateY(-10px) scale(0.97)",
-                transition: "opacity 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.35s cubic-bezier(0.16,1,0.3,1)",
-              }}
-            >
-              {rotatingWords[wordIdx]}
-            </span>
+          That{" "}
+          <br className="sm:hidden" />
+          <span
+            className="gradient-text inline-block"
+            style={{
+              opacity: wordVisible ? 1 : 0,
+              transform: wordVisible ? "translateY(0) scale(1)" : "translateY(-10px) scale(0.97)",
+              transition: "opacity 0.35s cubic-bezier(0.16,1,0.3,1), transform 0.35s cubic-bezier(0.16,1,0.3,1)",
+            }}
+          >
+            {rotatingWords[wordIdx]}
           </span>
         </h1>
 
         {/* Subheadline */}
-        <p className="text-gray-400 text-base sm:text-xl md:text-2xl max-w-2xl mx-auto leading-relaxed mb-10">
+        <p className="text-gray-400 text-base sm:text-xl max-w-xl sm:max-w-2xl mx-auto leading-relaxed mb-8 sm:mb-10">
           From AI-powered platforms to enterprise software — we craft digital
           solutions that transform how businesses operate and compete.
         </p>
 
         {/* CTAs */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <Link href="/portfolio" className="btn-primary text-base group">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-10 sm:mb-16">
+          <Link href="/portfolio" className="btn-primary text-sm sm:text-base group w-full sm:w-auto justify-center">
             View Portfolio
-            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
           </Link>
-          <Link href="/contact" className="btn-secondary text-base">
+          <Link href="/contact" className="btn-secondary text-sm sm:text-base w-full sm:w-auto justify-center">
             Contact Us
           </Link>
         </div>
 
         {/* Trusted by */}
         <div>
-          <p className="text-gray-700 text-xs font-semibold tracking-widest uppercase mb-5">
+          <p className="text-gray-700 text-[10px] sm:text-xs font-semibold tracking-widest uppercase mb-4">
             Trusted by innovative companies
           </p>
           {/* Scrolling marquee */}
           <div className="relative overflow-hidden">
-            <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#09090f] to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#09090f] to-transparent z-10 pointer-events-none" />
-            <div className="flex gap-12 items-center" style={{ animation: "scrollLeft 25s linear infinite" }}>
+            <div className="absolute left-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-r from-[#09090f] to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-10 sm:w-16 bg-gradient-to-l from-[#09090f] to-transparent z-10 pointer-events-none" />
+            <div className="flex gap-8 sm:gap-12 items-center" style={{ animation: "scrollLeft 25s linear infinite" }}>
               {[...clients, ...clients].map((name, i) => (
                 <span
                   key={i}
-                  className="text-gray-600 font-bold text-sm tracking-wide hover:text-gray-400 transition-colors whitespace-nowrap"
+                  className="text-gray-600 font-bold text-xs sm:text-sm tracking-wide whitespace-nowrap"
                 >
                   {name}
                 </span>
@@ -237,7 +197,7 @@ function HeroSection() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-gray-700 text-[10px] font-medium tracking-widest uppercase">
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 text-gray-700 text-[10px] font-medium tracking-widest uppercase">
         <span>Scroll</span>
         <ChevronDown className="w-4 h-4 animate-bounce" />
       </div>
@@ -272,37 +232,6 @@ function ServicesPreview() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
           {homeServices.map((s) => (
             <ServiceCard key={s.title} {...s} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ── Featured Projects ─────────────────────────────────────── */
-function FeaturedProjects() {
-  return (
-    <section className="py-24 md:py-32 bg-[#09090f] relative overflow-hidden">
-      <div
-        className="absolute top-0 left-0 w-[600px] h-[500px] rounded-full bg-purple-900/12 pointer-events-none"
-        style={{ filter: "blur(120px)" }}
-      />
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
-          <div>
-            <div className="section-badge mb-5">Our Work</div>
-            <h2 className="section-title text-white">
-              Projects That Define{" "}
-              <span className="gradient-text">Excellence</span>
-            </h2>
-          </div>
-          <Link href="/portfolio" className="btn-ghost flex-shrink-0">
-            All projects <ArrowRight className="w-4 h-4" />
-          </Link>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {featuredProjects.map((p) => (
-            <ProjectCard key={p.title} {...p} />
           ))}
         </div>
       </div>
@@ -351,7 +280,6 @@ export default function HomePage() {
       <HeroSection />
       <VideoSection />
       <ServicesPreview />
-      <FeaturedProjects />
       <StatsSection />
       <TestimonialsPreview />
       <CTASection />
