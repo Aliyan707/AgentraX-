@@ -24,13 +24,9 @@
       "Bash(netstat -ano)",
       "PowerShell(Stop-Process *)",
       "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000)",
-<<<<<<< HEAD
       "Bash(curl -s -o /dev/null -w \"/portfolio HTTP %{http_code}\\\\n\" http://localhost:3000/portfolio)",
       "Bash(Get-Content \"C:\\\\Users\\\\Cs\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\C--Users-Cs-Downloads-AgentraX--main-AgentraX\\\\77d0b1ed-4f6a-48ba-a694-c8f901daf20f\\\\tasks\\\\bogx57yls.output\" -Wait)",
       "Bash(Select-String -Pattern \"localhost|ready|error|Error|failed|Failed\")"
-=======
-      "Bash(curl -s -o /dev/null -w \"/portfolio HTTP %{http_code}\\\\n\" http://localhost:3000/portfolio)"
->>>>>>> d9e1f0e9b5b5ee493175c4b765ab97fcde8ba682
     ]
   }
 }
